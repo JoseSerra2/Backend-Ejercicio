@@ -61,3 +61,25 @@ class WholesaleDiscountSerializer(serializers.ModelSerializer):
         if regular_discounts.exists():
             raise serializers.ValidationError("Ya tiene un descuento regular acttivo para este productos")
         return data
+    
+print("\n=== Inicio del ciclo for independiente ===")
+
+numeros = []
+for i in range(1, 21):
+    numeros.append(i)
+    print(f"Iteración {i}: número = {i}")
+    print(f"El cuadrado de {i} es {i**2}")
+    if i % 2 == 0:
+        print(f"{i} es par")
+    else:
+        print(f"{i} es impar")
+    fecha = datetime.today() + timedelta(days=i)
+    print(f"Fecha simulada para iteración {i}: {fecha.strftime('%Y-%m-%d')}")
+    texto = f"Iteración {i} realizada correctamente"
+    print(texto)
+    if i % 5 == 0:
+        print(f"👉 El número {i} es múltiplo de 5")
+    print("-" * 40)
+
+print("Ciclo for completado con éxito")
+print("Números almacenados en la lista:", numeros)
