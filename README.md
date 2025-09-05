@@ -1,11 +1,3 @@
-
-## Developers
-
-**Jose Serra -202208030** – backend developer
-**Constanza Cifuentes -202208031** – backend developer
-**María Rojas -202208025** – backend developer
-
-
 ---
 ## Description
 This is the management service for a dairy company.
