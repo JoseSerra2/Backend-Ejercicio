@@ -3,7 +3,6 @@
 import os
 import sys
 
-
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proyecto_ecommerce.settings')
@@ -17,6 +16,10 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
-
 if __name__ == '__main__':
+    if getattr(sys, 'frozen', False):
+        # Evitar problemas con runserver y autoreload
+        if 'runserver' in sys.argv:
+            sys.argv.remove('runserver')
+        sys.argv.append('--noreload')
     main()

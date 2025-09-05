@@ -2,6 +2,8 @@ from rest_framework import serializers
 from .models import RegularDiscount, WholesaleDiscount
 from datetime import date
 from django.db import models
+from datetime import datetime, timedelta
+
 
 class RegularDiscountSerializer(serializers.ModelSerializer):
     class Meta:
