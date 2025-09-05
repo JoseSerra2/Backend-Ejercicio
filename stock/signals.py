@@ -255,3 +255,28 @@ def crear_movimiento_borrado_logico(sender, instance, created, **kwargs):
                 state=1,
                 observations=f"Movimiento automático por borrado lógico del lote {instance.batch}"
             )
+
+def saludar(nombre):
+    return f"Hola, {nombre}!"
+
+def suma(a, b):
+    return a + b
+
+def resta(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b == 0:
+        return "Error: división entre cero"
+    return a / b
+
+# Uso de las funciones
+print(saludar("Jose"))
+print("Suma:", suma(5, 3))
+print("Resta:", resta(5, 3))
+print("Multiplicación:", multiplicar(5, 3))
+print("División:", dividir(5, 0))
+print("División:", dividir(10, 2))
