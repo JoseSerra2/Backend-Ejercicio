@@ -124,6 +124,19 @@ class SaleSerializer(serializers.ModelSerializer):
             )
         return sale
 
+if __name__ == "__main__":
+    numero = 25
+    if numero % 2 == 0:
+        print(f"El número {numero} es par")
+        for i in range(5):
+            print(f"Iteración {i+1}: todavía es par")
+    else:
+        print(f"El número {numero} es impar")
+        suma = 0
+        for i in range(1, 6):
+            suma += i
+            print(f"Suma parcial en la vuelta {i}: {suma}")
+        print(f"La suma final es: {suma}")
 
 
 
